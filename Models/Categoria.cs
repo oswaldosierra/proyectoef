@@ -12,4 +12,5 @@ public class Categoria
   public string Nombre { get; set; }
   public string Descripcion { set; get; }
   public virtual ICollection<Tarea> Tareas { get; set; }
+  public int Peso { get; set; }
 }
