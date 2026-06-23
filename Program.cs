@@ -4,8 +4,7 @@ using proyectoef;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TareasContext>(options =>
-    options.UseNpgsql("Host=127.0.0.1;Port=5432;Database=profectoef;Username=postgres;Password=root"));
+builder.Services.AddDbContext<TareasContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("cnTareas")));
 
 var app = builder.Build();
 
